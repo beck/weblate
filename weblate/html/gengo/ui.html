@@ -1,0 +1,16 @@
+<h2>Gengo</h2>
+
+<div class="navi-toolbar ui-widget-header ui-corner-all">
+
+  {% if job %}
+    ... UI with gengo ...
+  {% else %}
+
+  <form method="post" action="{% url 'gengo:order' %}">
+      {% csrf_token %}
+      <input type="hidden" name="unit" value="{{ unit.pk }}">
+      <input class="button" type="submit" value="Order a translation">
+  </form>
+  {% endif %}
+
+</div>

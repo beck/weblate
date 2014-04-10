@@ -27,6 +27,7 @@ from django.utils import formats
 import uuid
 import time
 
+from weblate.gengo.views import GengoUI
 from weblate.trans.models import SubProject, Unit, Change
 from weblate.trans.models.unitdata import Comment, Suggestion
 from weblate.trans.autofixes import fix_target
@@ -577,6 +578,8 @@ def translate(request, project, subproject, lang):
     # Prepare form
     form = TranslationForm(translation, unit)
 
+    gengo = GengoUI(request=request, unit=unit).html()
+
     return render(
         request,
         'translate.html',
@@ -592,6 +595,7 @@ def translate(request, project, subproject, lang):
             'search_id': search_result['search_id'],
             'search_query': search_result['query'],
             'offset': offset,
+            'gengo': gengo,
             'filter_name': search_result['name'],
             'filter_count': num_results,
             'filter_pos': offset + 1,

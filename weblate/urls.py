@@ -646,6 +646,9 @@ urlpatterns = patterns(
         name='user_avatar',
     ),
 
+    # Gengo
+    url(r'^gengo/', include('weblate.gengo.urls', namespace='gengo')),
+
     # Sitemap
     url(
         r'^sitemap\.xml$',

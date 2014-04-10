@@ -518,3 +518,9 @@ ALLOWED_HOSTS = []
 #    r'/data/(.*)$',     # Allowing public access to data exports
 #    r'/hooks/(.*)$',    # Allowing public access to notification hooks
 # )
+
+GENGO = {
+    'private_key': '',
+    'public_key': '',
+    'sandbox': True,
+}
