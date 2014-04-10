@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load translations %}
 {% load url from future %}
+{% load gengo %}
 {% load i18n %}
 
 {% block breadcrumbs %}
@@ -33,6 +34,8 @@
 </ul>
 {% endif %}
 {% endwith %}
+
+{% gengo_language %}
 
 <h2>{% trans "Tools" %}</h2>
 

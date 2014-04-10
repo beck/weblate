@@ -241,6 +241,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'social.apps.django_app.default',
     'south',
+    'weblate.gengo',
     'weblate.trans',
     'weblate.lang',
     'weblate.accounts',

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load url from future %}
+{% load gengo %}
 {% load i18n %}
 {% load static %}
 {% load translations %}
@@ -183,6 +184,8 @@
 
 </table>
 </form>
+
+{% gengo_translation %}
 
 <h2>{% trans "Translation context" %}</h2>
 
